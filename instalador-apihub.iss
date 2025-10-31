@@ -1,6 +1,6 @@
 #define MyAppName "ApiHub"
-#define MyAppVersion "25.02.6.0"
-#define MyAppPublisher "Copyright © 2025 Infarma Sistemas"
+#define MyAppVersion "25.02.6.2"
+#define MyAppPublisher "Copyright ï¿½ 2025 Infarma Sistemas"
 #define MyAppURL "https://infarma.com.br"
 
 [Setup]
@@ -11,6 +11,13 @@ AppPublisher={#MyAppPublisher}
 AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
+VersionInfoVersion={#MyAppVersion}
+AppVerName={#MyAppName} {#MyAppVersion}
+VersionInfoCompany={#MyAppPublisher}
+VersionInfoDescription={#MyAppName} Setup
+VersionInfoProductName={#MyAppName}
+VersionInfoProductVersion={#MyAppVersion}
+VersionInfoCopyright={#MyAppPublisher}
 DefaultDirName="C:\INFARMA\APIHUB\"
 UsePreviousAppDir=no
 DisableDirPage=yes
@@ -26,8 +33,6 @@ SolidCompression=yes
 WizardStyle=modern
 Uninstallable=false
 
-
-
 [Languages]
 Name: "brazilianportuguese"; MessagesFile: "compiler:Languages\BrazilianPortuguese.isl"
 
@@ -36,17 +41,13 @@ Source: "C:\INFARMA\APIHUB\*"; DestDir: "{app}"; Flags: ignoreversion recursesub
 
 [Icons]
 
-Name: "{commondesktop}\APIHUB"; Filename: "http://127.0.0.1:3334/dashboard"; WorkingDir: "{app}"; IconFilename: "{app}\assets\apihub.ico"
-Name: "{commondesktop}\Gerenciador Apihub"; Filename: "{app}\GerenciadorApihub.exe"; WorkingDir: "{app}";IconFilename: "{app}\assets\apihub-white.ico"
-;Name: "{userstartup}\Iniciar ApiHub"; Filename: "{app}\iniciar-apihub.bat"; WorkingDir: "{app}"; IconFilename: "{app}\apihub.ico"
-;Name: "{userstartup}\Redis - ApiHub"; Filename: "{app}\redis-server.exe"; WorkingDir: "{app}"; IconFilename: "{app}\apihub.ico" 
-
+Name: "{commondesktop}\Gerenciador APIHUB"; Filename: "{app}\gerenciador-apiHub-2.1.6.exe"; WorkingDir: "{app}";IconFilename: "{app}\assets\apihub-white.ico"
 
 [Run]
 Filename: "cmd.exe"; Parameters: "/C del /F /Q ""{app}\unins*.exe"""; Flags: runhidden
 Filename: "cmd.exe"; Parameters: "/C del /F /Q ""{app}\unins*.dat"""; Flags: runhidden  
-Filename: "notepad.exe"; Description: "Abrir instruções para instalação ApiHub"; Parameters: "{app}\README.txt"; Flags: nowait postinstall skipifsilent
-;Filename: "notepad.exe"; Description: "Abrir arquivo ENV - ApiHub"; Parameters: "{app}\.env.txt"; Flags: nowait postinstall skipifsilent
+Filename: "notepad.exe"; Description: "Abrir instruÃ§Ãµes para instalaÃ§Ã£o ApiHub"; Parameters: "{app}\INSTRUÃ‡Ã•ES.txt"; Flags: nowait postinstall skipifsilent
+
 
 
 [Code]
@@ -66,12 +67,12 @@ begin
   begin
     Exec('icacls', '"' + FilePath + '" /grant "Todos:(RX)" /T', '', SW_HIDE, ewWaitUntilTerminated, ErrorCode);
     if ErrorCode = 0 then
-      Log('Permissões aplicadas com sucesso em: ' + FilePath)
+      Log('Permissï¿½es aplicadas com sucesso em: ' + FilePath)
     else
-      Log('Erro ao aplicar permissões em: ' + FilePath + ', Código: ' + IntToStr(ErrorCode));
+      Log('Erro ao aplicar permissï¿½es em: ' + FilePath + ', Cï¿½digo: ' + IntToStr(ErrorCode));
   end
   else
-    Log('Arquivo não encontrado: ' + FilePath);
+    Log('Arquivo nï¿½o encontrado: ' + FilePath);
 end;
 
 procedure InitializeWizard;

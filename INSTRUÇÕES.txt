@@ -1,0 +1,28 @@
+
+     █████╗ ██████╗ ██╗██╗  ██╗██╗   ██╗██████╗ 
+    ██╔══██╗██╔══██╗██║██║  ██║██║   ██║██╔══██╗
+    ███████║██████╔╝██║███████║██║   ██║██████╔╝
+    ██╔══██║██╔═══╝ ██║██╔══██║██║   ██║██╔══██╗
+    ██║  ██║██║     ██║██║  ██║╚██████╔╝██   ██║
+    ╚═╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═███═╝
+
+    ==========  INSTRUÇÕES ==========      
+ -------------------------------------------------------------------------------
+
+APÓS EXECUTAR O INSTALADOR DO APIHUB SIGA OS PASSOS ABAIXO PARA A CONFIGURAÇÃO COMPLETA DO APIHUB:
+-------------------------------------------------------------------------------------------------------------------
+1 - CONFIGURAÇÃO DO ENV PAINEL DE PEDIDOS:
+Acesse ao App Gerenciador Apihub e clique no Botão ENV PAINEL para configurar os dados de acesso ao Painel de Pedidos para que em seguida seja feito a parametrização da integradora (ifood, Napp). Após a configuração do Painel de pedidos, clique no botão ENV para configurar os dados de acesso ao APIHUB.
+Obs: Não tem ordem correta, mas sempre recomendamos configurar primeiro o Painel de pedidos e depois o Apihub.
+
+------------------------------------------------------------------------------------------------------------------------
+
+2 - Após a configuração do arquivo ENV dentro do App Gerenciador Apihub clique no botão PLAY ▶️ para instalar os serviços e iniciá-los.
+Com isso, clique no botão Dashboard para verificar se a aplicação está sendo executada e em funcionamento correto.
+Obs: é possível verificar direto no Gerenciador Apihub se o serviço está ativo, mas para melhor detalhes abra o dashboard ou então clique no botão Logs.
+
+Caso não abra o dashboard do Apihub, clique no botão LOG para verificar os erros e mensagens apresentados ou solicite apoio do suporte N2.
+
+
+
+
