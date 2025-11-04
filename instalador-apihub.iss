@@ -1,5 +1,5 @@
 #define MyAppName "ApiHub"
-#define MyAppVersion "25.02.6.2"
+#define MyAppVersion "25.02.6.3"
 #define MyAppPublisher "Copyright � 2025 Infarma Sistemas"
 #define MyAppURL "https://infarma.com.br"
 
@@ -24,9 +24,9 @@ DisableDirPage=yes
 DefaultGroupName={#MyAppName}
 DisableProgramGroupPage=yes
 OutputDir="C:\INFARMA\"
-OutputBaseFilename=Instalador ApiHub Varejo 25.02fb
+OutputBaseFilename=Instalador ApiHub Varejo 25.02fb 25.02.6.3
 SetupIconFile="C:\INFARMA\APIHUB\assets\apihub.ico"
-;Password=Infarma@060115. caso desejar utilizar senha, descomentar essa linha e mudar para yes na linha abaixo
+;Password=Infarma@060115. caso desejar utilizar senha, descomentar essa linha
 Encryption=no
 Compression=lzma
 SolidCompression=yes
@@ -41,7 +41,7 @@ Source: "C:\INFARMA\APIHUB\*"; DestDir: "{app}"; Flags: ignoreversion recursesub
 
 [Icons]
 
-Name: "{commondesktop}\Gerenciador APIHUB"; Filename: "{app}\gerenciador-apiHub-2.1.6.exe"; WorkingDir: "{app}";IconFilename: "{app}\assets\apihub-white.ico"
+Name: "{commondesktop}\Gerenciador APIHUB"; Filename: "{app}\gerenciador-apiHub-2.1.7.exe"; WorkingDir: "{app}";IconFilename: "{app}\assets\apihub-white.ico"
 
 [Run]
 Filename: "cmd.exe"; Parameters: "/C del /F /Q ""{app}\unins*.exe"""; Flags: runhidden
@@ -67,12 +67,12 @@ begin
   begin
     Exec('icacls', '"' + FilePath + '" /grant "Todos:(RX)" /T', '', SW_HIDE, ewWaitUntilTerminated, ErrorCode);
     if ErrorCode = 0 then
-      Log('Permiss�es aplicadas com sucesso em: ' + FilePath)
+      Log('Permissões aplicadas com sucesso em: ' + FilePath)
     else
-      Log('Erro ao aplicar permiss�es em: ' + FilePath + ', C�digo: ' + IntToStr(ErrorCode));
+      Log('Erro ao aplicar permissões em: ' + FilePath + ', Código: ' + IntToStr(ErrorCode));
   end
   else
-    Log('Arquivo n�o encontrado: ' + FilePath);
+    Log('Arquivo não encontrado: ' + FilePath);
 end;
 
 procedure InitializeWizard;
