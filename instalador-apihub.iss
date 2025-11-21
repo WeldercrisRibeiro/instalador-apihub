@@ -1,5 +1,5 @@
 #define MyAppName "ApiHub"
-#define MyAppVersion "25.02.6.3"
+#define MyAppVersion "25.03.1.0"
 #define MyAppPublisher "Copyright � 2025 Infarma Sistemas"
 #define MyAppURL "https://infarma.com.br"
 
@@ -24,8 +24,8 @@ DisableDirPage=yes
 DefaultGroupName={#MyAppName}
 DisableProgramGroupPage=yes
 OutputDir="C:\INFARMA\"
-OutputBaseFilename=Instalador ApiHub Varejo 25.02fb 25.02.6.3
-SetupIconFile="C:\INFARMA\APIHUB\assets\apihub.ico"
+OutputBaseFilename=Instalador ApiHub Varejo 25.03.1.1
+SetupIconFile="C:\INFARMA\APIHUB\apihub.ico"
 ;Password=Infarma@060115. caso desejar utilizar senha, descomentar essa linha
 Encryption=no
 Compression=lzma
@@ -41,7 +41,7 @@ Source: "C:\INFARMA\APIHUB\*"; DestDir: "{app}"; Flags: ignoreversion recursesub
 
 [Icons]
 
-Name: "{commondesktop}\Gerenciador APIHUB"; Filename: "{app}\gerenciador-apiHub-2.1.7.exe"; WorkingDir: "{app}";IconFilename: "{app}\assets\apihub-white.ico"
+Name: "{commondesktop}\Gestor APIHUB"; Filename: "{app}\gestor-apiHub-S25.11.21.exe"; WorkingDir: "{app}";IconFilename: "{app}\gestor.apihub.ico"
 
 [Run]
 Filename: "cmd.exe"; Parameters: "/C del /F /Q ""{app}\unins*.exe"""; Flags: runhidden
